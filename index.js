@@ -11,14 +11,15 @@ const postgreClient = new Client({
   host: process.env.POSTGRE_HOST,
   port: process.env.POSTGRE_PORT,
   database: process.env.POSTGRE_DBNAME,
-  dialect: "postgres",
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
+  ssl: {
+    require: true,
+    rejectUnauthorized: false,
   },
 });
 
-console.log(postgreClient);
 postgreClient.connect();
+
+const result = await client.query("SELECT NOW()");
+console.log(result);
+
+await client.end();
