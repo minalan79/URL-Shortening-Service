@@ -19,7 +19,7 @@ const postgreClient = new Client({
 
 postgreClient.connect();
 
-const result = await client.query("SELECT NOW()");
+const result = await postgreClient.query("SELECT NOW()");
 console.log(result);
 
-await client.end();
+await postgreClient.end();
