@@ -11,7 +11,12 @@ const postgreClient = new Client({
   host: process.env.POSTGRE_HOST,
   port: process.env.POSTGRE_PORT,
   database: process.env.POSTGRE_DBNAME,
-  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 console.log(postgreClient);
