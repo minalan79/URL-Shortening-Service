@@ -1,0 +1,22 @@
+{
+  "name": "url-shortening-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minalan79/URL-Shortening-Service.git"
+  },
+  "author": "minalan79",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minalan79/URL-Shortening-Service/issues"
+  },
+  "homepage": "https://github.com/minalan79/URL-Shortening-Service#readme",
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}
