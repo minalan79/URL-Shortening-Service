@@ -6,11 +6,11 @@ dotenv.config();
 const { Client } = pg;
 
 const postgreClient = new Client({
-  user: env.POSTGRE_USER,
-  password: env.POSTGRE_PASSWORD,
-  host: env.POSTGRE_HOST,
-  port: env.POSTGRE_PORT,
-  database: env.POSTGRE_DBNAME,
+  user: process.env.POSTGRE_USER,
+  password: process.env.POSTGRE_PASSWORD,
+  host: process.env.POSTGRE_HOST,
+  port: process.env.POSTGRE_PORT,
+  database: process.env.POSTGRE_DBNAME,
 });
 
 postgreClient.connect();
